@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <%= Post.find(@id).name %>
+    <%= Post.find(@id).content %>
+
+    <form class="" action="/posts/<%= @id %>/delete" method="post">
+      <input id="hidden" type="hidden" name="_method" value="delete">
+      <input type="submit" id="delete">
+
+    </form>
+
+  </body>
+</html>

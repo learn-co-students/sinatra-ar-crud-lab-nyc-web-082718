@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <form class="" action="/posts/<%= @id %>" method="post">
+      <input id="hidden" type="hidden" name="_method" value="patch">
+      <input type="text" name="name" value="<%= Post.find(@id).name %>">
+      <input type="text" name="content" value="<%= Post.find(@id).content %>">
+
+      <input type="submit" id="submit">
+    </form>
+
+  </body>
+</html>
